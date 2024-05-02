@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rectángulos Dinámicos</title>
+  <style>
+    .rectangle {
+      width: 100px;
+      height: 50px;
+      background-color: #ff0000;
+      margin: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <form id="rectangleForm">
+    <label for="numeroInput">Ingrese un número:</label>
+    <input type="number" id="numeroInput" name="numeroInput">
+    <button type="button" onclick="generarRectangulos()">Generar Rectángulos</button>
+  </form>
+
+  <div id="rectangulosContainer"></div>
+
+  <script>
+    function generarRectangulos() {
+      var numero = document.getElementById('numeroInput').value;
+      var rectangulosContainer = document.getElementById('rectangulosContainer');
+      rectangulosContainer.innerHTML = '';
+
+      for (var i = 0; i < numero; i++) {
+        var rectangle = document.createElement('div');
+        rectangle.classList.add('rectangle');
+        rectangulosContainer.appendChild(rectangle);
+      }
+    }
+  </script>
+</body>
+</html>
