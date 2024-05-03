@@ -3,22 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rectángulos Dinámicos</title>
+  <title>Listas Doblemente Enlazadas</title>
+
   <style>
     .rectangle {
-      width: 100px;
-      height: 50px;
-      background-color: #ff0000;
-      margin: 10px;
+      width: 150px;
+      height: 250px;
+      background-color: #8888f6;
+      margin: 30px;
       display: inline-block;
+    }
+
+    .centrado {
+      text-align: center; /* Centra el texto */
+      font-size: large;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .centrado-btn {
+      display: flex;
+      justify-content: center; /* Centra el botón */
     }
   </style>
 </head>
+
 <body>
   <form id="rectangleForm">
-    <label for="numeroInput">Ingrese un número:</label>
+    <label for="numeroInput" class="centrado">Ingrese número de cajas:</label>
     <input type="number" id="numeroInput" name="numeroInput">
-    <button type="button" onclick="generarRectangulos()">Generar Rectángulos</button>
+    <br><br>
+    <button type="button" onclick="generarRectangulos()" class="centrado-btn">Generar Rectángulos</button>
   </form>
 
   <div id="rectangulosContainer"></div>
